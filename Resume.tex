@@ -1,113 +1,131 @@
-\documentclass[11pt]{article}
-\usepackage[a4paper,margin=0.7in]{geometry}
-\usepackage[hidelinks]{hyperref}
+\documentclass[11pt]{article} % set main text size
+
+\usepackage[a4paper,
+top=0.4in,
+bottom=0.4in,
+left=0.5in,
+right=0.5in]{geometry}
+
+\usepackage{XCharter}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{enumitem}
-\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+
+\raggedright
 \pagestyle{empty}
 
-% Better spacing
-\setlist{nosep}
-\renewcommand{\baselinestretch}{1.05} % slightly more spacing
-\setlength{\parskip}{0.4em}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt}
 
 \begin{document}
 
-% Header
-\begin{center}
-    {\LARGE \textbf{Harshit Dudhani}} \\[0.25em]
-    {\faPhone\ +91 7597711870} \quad | \quad
-    harshitdudhani2004@gmail.com \quad | \quad
-    {\faGithub\ \href{https://github.com/harshitdudhani}{GitHub}} \quad | \quad
-    {\faLinkedin\ \href{https://www.linkedin.com/in/harshit-dudhani-777061297/}{LinkedIn}}
-\end{center}
+% Name
+\centerline{\Huge Harshit Dudhani}
+\vspace{3pt}
 
-\vspace{0.4em}
-\hrule
-\vspace{0.8em}
+% Contact Info
+\centerline{
+\href{mailto:harshitdudhani072@gmail.com}{\underline{harshitdudhani072@gmail.com}} |
+\href{https://github.com/harshitdudhani}{\underline{GitHub}} |
+\href{https://www.linkedin.com/in/harshit-dudhani-777061297/}{\underline{LinkedIn}}
+}
+\vspace{-15pt}
 
 % Education
-\section*{EDUCATION}
-\noindent
-\textbf{Indian Institute of Information Technology, Pune} \hfill \textit{Aug 2023--Apr 2027}\\
-Bachelor of Technology in Electronics and Communication Engineering \hfill CGPA - 7.93
+\section*{Education}
+\textbf{Indian Institute of Information Technology} \hfill {Pune, MH}\\
+\textit{Bachelor of Technology in Computer Science} \hfill \textbf{CGPA:} 7.93 \\
+\hfill \textit{October 2022 - July 2026 (expected)}
 
-\vspace{0.6em}
-\hrule
-\vspace{0.8em}
+\vspace{2pt}
+\textbf{Class XII (CBSE)} \hfill \textbf{Percentage:} 96\% \\
+\textit{Sanskar International Academy} \hfill \textit{March 2022}
 
-% Achievements
-\section*{ACHIEVEMENTS}
-\begin{itemize}[left=0pt,label=--]
-  \item Pupil in CodeForces
-  \item 1502 peak rating in CodeChef
-  \item Solved 300+ Data Structures \& Algorithms problems across platforms
-  \item Participated in multiple hackathons and competitive programming contests
-\end{itemize}
-
-\vspace{0.6em}
-\hrule
-\vspace{0.8em}
-
-% Skills
-\section*{SKILLS}
-\begin{itemize}[left=0pt,label=--]
-  \item \textbf{Programming \& Scripting:} C, C++, Java, Python, JavaScript, Bash, SQL, HTML, CSS, Kotlin 
-  \item \textbf{Frameworks \& Libraries:} React, Next.js, Tailwind CSS, Vite
-  \item \textbf{Databases:} PostgreSQL, MongoDB
-  \item \textbf{Design \& Tools:} Git, GitHub, Linux utilities, Figma, Android Studio, VS Code, Intellij Idea
-\end{itemize}
-
-\vspace{0.6em}
-\hrule
-\vspace{0.8em}
+\vspace{-12pt}
 
 % Projects
-\section*{PROJECTS}
+\section*{Projects}
 
-\noindent
-\textbf{QuizNest – A Quiz Application (Java, Swing, File I/O, Networking)}
-\begin{itemize}[left=1em,label=--]
-  \item Quiz platform supporting both \textbf{online and offline formats}.
-  \item Features: \textbf{Solo Quiz}, \textbf{API Quiz}, and \textbf{1v1 Quiz} with client–server networking.
-  \item Built with \textbf{Java Swing}, \textbf{file handling}, and \textbf{socket programming}.
-  \item Integrated a \textbf{leaderboard system} for competitive gameplay and progress tracking.
+\textbf{QuizNest – A Quiz Application} | \emph{Java, Swing, File I/O, Networking}
+\hfill \textbf{\href{https://github.com/harshitdudhani/QuizNest}{\color{blue}\faGithub}}
+\vspace{-3pt}
+\begin{itemize}
+\item Quiz platform supporting both online and offline formats.
+\item Features: Solo Quiz, API Quiz, and 1v1 Quiz with client–server networking.
+\item Built with Java Swing, file handling, and socket programming.
+\item Integrated a leaderboard system for competitive gameplay and progress tracking.
+\end{itemize}
+\vspace{-4pt}
+
+\textbf{OptiRead – OCR Based Text Extraction Software} | \emph{Python, OCR, NumPy, Matplotlib, OpenCV}
+\hfill \textbf{\href{https://github.com/harshitdudhani/OptiRead.git}{\color{blue}\faGithub}}
+\vspace{-3pt}
+\begin{itemize}
+\item Developed a software that extracts text from input images using OCR techniques.
+\item Generates a \texttt{.txt} file containing the extracted text for easy access.
+\item Provides a confidence score of \textbf{0.9+} to ensure reliable recognition.
+\item Utilized NumPy, Matplotlib, and OpenCV (\texttt{cv2}) for preprocessing and visualization.
+\end{itemize}
+\vspace{-4pt}
+
+\textbf{Digital Elevator Control with Adaptive Scheduling} | \emph{Verilog, Digital Design, FSM}
+\vspace{-3pt}
+\begin{itemize}
+\item Designed a digital elevator controller using \textbf{Verilog HDL} with adaptive scheduling logic.
+\item Implemented \textbf{finite state machines (FSMs)} to manage elevator movement, floor requests, and door control.
+\item Optimized request handling by prioritizing direction-based and nearest-floor scheduling.
+\item Simulated and verified functionality using testbenches to ensure correctness and reliability.
 \end{itemize}
 
-\vspace{0.5em}
+\vspace{-18pt}
 
-\noindent
-\textbf{Quantnum – Maths Club Website (React, Vite, Tailwind CSS)}
-\begin{itemize}[left=1em,label=--]
-  \item Built the official website for the \textbf{Quantnum Maths Club}.
-  \item Responsive design with \textbf{Tailwind CSS}, optimized for all devices.
-  \item Includes pages for club intro, events, announcements, team members, and “Apply Now” form.
-
+% Skills
+\section*{Skills}
+\begin{itemize}
+\item \textbf{Core Programming:} C, C++, Java, Python, JavaScript, Bash, SQL, HTML, CSS, Verilog.
+\item \textbf{Frameworks and Libraries:} React, Tailwind CSS, Vite, Flutter, OCR.
+\item \textbf{Databases:} PostgreSQL, MongoDB, MySQL.
+\item \textbf{Design and Tools:} Git, GitHub, Linux utilities, Figma, Android Studio, VS Code, IntelliJ IDEA.
 \end{itemize}
 
-\vspace{0.6em}
-\hrule
-\vspace{0.8em}
+\vspace{-18pt}
 
-% Positions
-\section*{POSITIONS OF RESPONSIBILITY}
-
-\noindent
-\textbf{Core Member, Robotics Club, IIIT Pune} \hfill 2023--Present
-\begin{itemize}[left=1em,label=--]
-  \item Contributed to workshops, technical sessions, and project development within the club.
-
+% Achievements
+\section*{Achievements}
+\begin{itemize}
+\item Winner in Rope Climber Competition at \textbf{IIT Roorkee Tech Fest – Cognizance}.
+\item Winner in Robo Race Competition at \textbf{BVP Tech Fest}.
 \end{itemize}
 
-\noindent
-\textbf{Marketing \& PR, Event Management, Sports Club, IIIT Pune} \hfill 2023--Present
-\begin{itemize}[left=1em,label=--]
-  \item Managed promotional activities, sponsorship outreach, and event publicity for sports events.
+\vspace{-18pt}
 
+% Position of Responsibility
+\section*{Position of Responsibility}
+
+\textbf{Vice President,} \href{https://www.iiitp.ac.in/page/rofies}{\underline{R.O.F.I.E.S - Robotics Club}} — IIIT Pune
+\hfill \textit{September 2025 - Present}
+\vspace{-5pt}
+\begin{itemize}
+\item Directed club operations and strategic planning for a team of \textbf{20+ members}.
+\item Organized \textbf{5+ major events}, including inter-college robotics competitions and technical workshops.
+\item Mentored project leads and established a new member onboarding program.
 \end{itemize}
 
-\noindent
-\textbf{Marketing \& PR, Event Management,Quantnum, IIIT Pune} \hfill 2024--Present
-\begin{itemize}[left=1em,label=--]
-  \item Handled event marketing, outreach, and participant engagement for academic events.
+\textbf{PR Head,} Quantnum – Maths Club, IIIT Pune
+\hfill \textit{April 2025 - Present}
+\vspace{-5pt}
+\begin{itemize}
+\item Managed outreach, publicity, and event promotion strategies for the Maths Club.
+\item Coordinated with external partners to increase participation in club events.
+\end{itemize}
 
 \end{document}
